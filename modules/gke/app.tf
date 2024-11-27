@@ -215,6 +215,12 @@ resource "kubernetes_deployment_v1" "wordpress" {
             name       = "wordpress-persistent-storage-test"
             mount_path = "/var/www/html"
           }
+          resources {
+            requests = {
+              cpu   = "500m"
+              memory = "512Mi"
+            }
+          }
         }
 
         container {
