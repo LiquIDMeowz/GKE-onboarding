@@ -21,6 +21,7 @@ resource "google_container_node_pool" "liquid_pool" {
   cluster            = google_container_cluster.liquid_cluster.name
   location           = var.resource_region
   node_count = 1
+  max_pods_per_node = 50
   autoscaling {
     min_node_count = 1
     max_node_count = 3
@@ -37,9 +38,5 @@ resource "google_container_node_pool" "liquid_pool" {
     auto_upgrade = true
     auto_repair  = true
   }
-}
-
-module "nginx-controller" {
-  source  = "terraform-iaac/nginx-controller/helm"
 }
 

@@ -1,6 +1,6 @@
 variable "rds_instance_name" {
   description = "The name of the RDS instance"
-  default = "mysql-wordpress-instance"
+  default = "mysql-wordpress-instance-2"
 }
 
 variable "rds_version" {
