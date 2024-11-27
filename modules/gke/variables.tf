@@ -21,3 +21,7 @@ variable "subnet_secondary_ranges" {
 variable "pool_name" {
   description = "The name of the pool"
 }
+
+variable "zone" {
+  description = "The zone"
+}

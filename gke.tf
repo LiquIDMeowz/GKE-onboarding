@@ -6,4 +6,5 @@ module "gke" {
   subnet_id = module.network.subnet_id
   subnet_secondary_ranges = module.network.subnet_secondary_ranges
   pool_name = var.pool_name
+  zone = var.zone
 }
